@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(() => {
+  const saved = localStorage.getItem("theme");
+  if (saved === "light") document.documentElement.classList.add("light");
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kieran O'Keeffe | Magic: The Gathering</title>
+<meta name="description" content="Kieran O'Keeffe's personal space for playing, exploring and sharing Magic: The Gathering.">
+<meta property="og:title" content="Kieran O'Keeffe | Magic: The Gathering">
+<meta property="og:description" content="Magic: The Gathering is my serious hobby: a game I play, explore and want to share with others.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kieran O'Keeffe | Magic: The Gathering">
+<meta name="twitter:description" content="A personal space for playing, exploring and sharing Magic: The Gathering.">
+<!-- Add og:image later: 1200x630 PNG matching dark theme -->
+<link rel="icon" href="data:image/svg+xml,<svg.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🃏</text></svg>
+https://fonts.googleapis.com
+<link href="https://fonts.googleapis.com/css2?:wght@400;500;600;700;800&display=swap
+
+<style>
+:root{
+  --bg:#020a18;--bg-grad:linear-gradient(170deg,#020a18 0%,#041028 40%,#06142e 70%,#020a18 100%);
+  --surface:rgba(8,24,56,.85);--border:rgba(0,170,255,.12);--border-glow:rgba(0,170,255,.3);
+  --text:#d0e0f0;--text-bright:#e8f0ff;--text-dim:#6888aa;
+  --neon:#00aaff;--cyan:#00e5ff;--green:#00ff88;--amber:#ffaa00;--red:#ff4466;--purple:#aa66ff;
+}
+html.light{
+  --bg:#edf4fb;--bg-grad:linear-gradient(170deg,#f7fbff 0%,#e8f2fc 45%,#dfeefa 75%,#f7fbff 100%);
+  --surface:rgba(255,255,255,.88);--border:rgba(0,90,160,.15);--border-glow:rgba(0,110,190,.25);
+  --text:#29425c;--text-bright:#102a43;--text-dim:#59748f;
+  --neon:#006fbd;--cyan:#008da6;--green:#008f58;--amber:#a96300;--red:#c62e4d;--purple:#7045c7;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;background:var(--bg);min-height:100vh}
+.bg{position:fixed;inset:0;background:var(--bg-grad);z-index:-4}
+.grid{position:fixed;inset:0;z-index:-3;background-image:linear-gradient(rgba(80,180,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(80,180,255,.035) 1px,transparent 1px);background-size:60px 60px}
+.orb{position:fixed;width:340px;height:340px;border-radius:50%;filter:blur(100px);opacity:.08;z-index:-2;pointer-events:none}
+.o1{background:var(--cyan);left:-300px;top:12%;animation:orbit1 18s ease-in-out infinite alternate}
+.o2{background:var(--purple);right:-300px;top:45%;animation:orbit2 22s ease-in-out infinite alternate}
+.o3{background:var(--green);left:-280px;bottom:-100px;animation:orbit1 26s ease-in-out infinite alternate-reverse}
+@key
