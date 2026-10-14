@@ -212,6 +212,3 @@ document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
-.o2{background:var(--purple);right:-300px;top:45%;animation:orbit2 22s ease-in-out infinite alternate}
-.o3{background:var(--green);left:-280px;bottom:-100px;animation:orbit1 26s ease-in-out infinite alternate-reverse}
-@key
